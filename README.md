@@ -33,4 +33,5 @@ Conoce más sobre nuestra misión y el propósito de esta plataforma.
 ### 🔹 [Contact](#) 📩  
 Ponte en contacto con nosotros para colaboraciones o consultas.  
 
-
+# Trunk based developement 
+  Cada uno toca un fichero diferente, nunca tocamos en mismo fichero. Siempre antes de pushear algo tienes que descargártelo primero.El fichero general hay que turnarnos para editarlo.
