@@ -1,11 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="arte.css">
+    <link href="https://fonts.cdnfonts.com/css/harting" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/insight-issue-new" rel="stylesheet">
+    <title>Eventos Artisticos</title>
 </head>
 <body>
-    
+    <header class="headercarta">
+        <nav class="menu">
+            <ul>
+                <li><a href="mapas.html">Ubicacion</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="eventos.html" class="active">Eventos</a></li>
+                <li><a href="index.html"><img src="logo.png" alt="logo" width="150" height="100"></a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="eventos-container">
+        <h1>Proximos Eventos</h1>
+        
+        <div class="filtros-eventos">
+            <button class="btn-evento active" data-filter="todos">Todos</button>
+            <button class="btn-evento" data-filter="exposicion">Exposiciones</button>
+            <button class="btn-evento" data-filter="taller">Talleres</button>
+            <button class="btn-evento" data-filter="conferencia">Conferencias</button>
+            <button class="btn-evento" data-filter="especial">Eventos Especiales</button>
+        </div>
+
+        <div class="eventos-grid">
+            <article class="evento-item exposicion">
+                <div class="evento-imagen">
+                    <img src="1.jpg" alt="Exposición Nocturna">
+                    <div class="fecha-evento">
+                        <span class="dia">15</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Exposición Nocturna de Arte</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 19:00 - 23:00</p>
+                        <p class="ubicacion">📍 Sala de Exposiciones</p>
+                    </div>
+                    <p class="descripcion">Disfruta de una experiencia visual única con las mejores obras de arte contemporáneo.</p>
+                    <button class="btn-detalle">Reservar Entradas</button>
+                </div>
+            </article>
+
+            <!-- Evento 2 Taller -->
+            <article class="evento-item taller">
+                <div class="evento-imagen">
+                    <img src="2.jpg" alt="Taller de Pintura Abstracta">
+                    <div class="fecha-evento">
+                        <span class="dia">18</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Taller de Pintura Abstracta</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 10:00 - 14:00</p>
+                        <p class="ubicacion">📍 Taller de Arte 1</p>
+                    </div>
+                    <p class="descripcion">Descubre las técnicas de la pintura abstracta mientras experimentas con colores y formas.</p>
+                    <button class="btn-detalle">Inscribirse</button>
+                </div>
+            </article>
+
+            <article class="evento-item conferencia">
+                <div class="evento-imagen">
+                    <img src="3.jpg" alt="Conferencia de Escultura Moderna">
+                    <div class="fecha-evento">
+                        <span class="dia">22</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Conferencia sobre Escultura Moderna</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 15:00 - 17:00</p>
+                        <p class="ubicacion">📍 Auditorio Principal</p>
+                    </div>
+                    <p class="descripcion">Un experto en escultura moderna compartirá sus conocimientos sobre las nuevas tendencias en el arte.</p>
+                    <button class="btn-detalle">Participar</button>
+                </div>
+            </article>
+
+            <article class="evento-item exposicion">
+                <div class="evento-imagen">
+                    <img src="4.jpg" alt="Exposicion de Arte Contemporáneo">
+                    <div class="fecha-evento">
+                        <span class="dia">25</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Exposición de Arte Contemporáneo</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 11:00 - 19:00</p>
+                        <p class="ubicacion">📍 Galería de Arte</p>
+                    </div>
+                    <p class="descripcion">Sumérgete en el mundo del arte contemporáneo con una selección de las obras más impactantes.</p>
+                    <button class="btn-detalle">Ver Más</button>
+                </div>
+            </article>
+
+            <article class="evento-item taller">
+                <div class="evento-imagen">
+                    <img src="5.jpg" alt="Taller de Cerámica">
+                    <div class="fecha-evento">
+                        <span class="dia">30</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Taller de Cerámica Artesanal</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 09:00 - 13:00</p>
+                        <p class="ubicacion">📍 Taller de Cerámica</p>
+                    </div>
+                    <p class="descripcion">Aprende las técnicas más antiguas de la cerámica y crea tus propias piezas artísticas.</p>
+                    <button class="btn-detalle">Inscribirse</button>
+                </div>
+            </article>
+
+            <article class="evento-item especial">
+                <div class="evento-imagen">
+                    <img src="6.jpg" alt="Noche de Gala">
+                    <div class="fecha-evento">
+                        <span class="dia">1</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Noche de Gala y Subasta</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 20:00 - 23:00</p>
+                        <p class="ubicacion">📍 Hotel Grand</p>
+                    </div>
+                    <p class="descripcion">Disfruta de una noche de gala con una subasta benéfica de arte exclusivo.</p>
+                    <button class="btn-detalle">Comprar Entradas</button>
+                </div>
+            </article>
+
+            <article class="evento-item exposicion">
+                <div class="evento-imagen">
+                    <img src="7.jpg" alt="Exposición de Arte Infantil">
+                    <div class="fecha-evento">
+                        <span class="dia">3</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Exposición de Arte Infantil</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 10:00 - 16:00</p>
+                        <p class="ubicacion">📍 Centro Cultural</p>
+                    </div>
+                    <p class="descripcion">Una muestra de creatividad y talento joven. Ven y disfruta de las obras realizadas por niños y jóvenes artistas.</p>
+                    <button class="btn-detalle">Ver Más</button>
+                </div>
+            </article>
+
+            <article class="evento-item taller">
+                <div class="evento-imagen">
+                    <img src="8.jpg" alt="Taller de Escultura en Madera">
+                    <div class="fecha-evento">
+                        <span class="dia">7</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Taller de Escultura en Madera</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 09:00 - 13:00</p>
+                        <p class="ubicacion">📍 Taller de Escultura</p>
+                    </div>
+                    <p class="descripcion">Aprende a trabajar con madera y crea tus propias esculturas en este taller práctico y creativo.</p>
+                    <button class="btn-detalle">Inscribirse</button>
+                </div>
+            </article>
+
+            <article class="evento-item conferencia">
+                <div class="evento-imagen">
+                    <img src="9.jpg" alt="Conferencia de Fotografía">
+                    <div class="fecha-evento">
+                        <span class="dia">10</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Conferencia de Fotografía Creativa</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 16:00 - 18:00</p>
+                        <p class="ubicacion">📍 Sala de Conferencias</p>
+                    </div>
+                    <p class="descripcion">Aprende técnicas innovadoras para capturar imágenes impactantes y creativas.</p>
+                    <button class="btn-detalle">Participar</button>
+                </div>
+            </article>
+
+            <article class="evento-item exposicion">
+                <div class="evento-imagen">
+                    <img src="10.jpg" alt="Exposición de Arte Abstracto">
+                    <div class="fecha-evento">
+                        <span class="dia">15</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Exposición de Arte Abstracto</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 11:00 - 19:00</p>
+                        <p class="ubicacion">📍 Galería Artística</p>
+                    </div>
+                    <p class="descripcion">Sumérgete en la abstracción con una colección única de pinturas y esculturas modernas.</p>
+                    <button class="btn-detalle">Ver Más</button>
+                </div>
+            </article>
+
+            <article class="evento-item taller">
+                <div class="evento-imagen">
+                    <img src="11.jpg" alt="Taller de Cerámica Contemporánea">
+                    <div class="fecha-evento">
+                        <span class="dia">18</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Taller de Cerámica Contemporánea</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 10:00 - 14:00</p>
+                        <p class="ubicacion">📍 Taller de Cerámica</p>
+                    </div>
+                    <p class="descripcion">Aprende a crear piezas de cerámica con un enfoque moderno y experimental.</p>
+                    <button class="btn-detalle">Inscribirse</button>
+                </div>
+            </article>
+
+            <article class="evento-item especial">
+                <div class="evento-imagen">
+                    <img src="12.jpg" alt="Fiesta de Lanzamiento">
+                    <div class="fecha-evento">
+                        <span class="dia">22</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Fiesta de Lanzamiento de Nueva Galería</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 21:00 - 02:00</p>
+                        <p class="ubicacion">📍 Galería de Arte 2</p>
+                    </div>
+                    <p class="descripcion">Celebra con nosotros la inauguración de una nueva galería con música, arte y entretenimiento.</p>
+                    <button class="btn-detalle">Asistir</button>
+                </div>
+            </article>
+
+            <article class="evento-item exposicion">
+                <div class="evento-imagen">
+                    <img src="13.jpg" alt="Exposición de Arte Pop">
+                    <div class="fecha-evento">
+                        <span class="dia">25</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                </div>
+                <div class="evento-info">
+                    <h3>Exposición de Arte Pop</h3>
+                    <div class="detalles-evento">
+                        <p class="horario">🕒 10:00 - 19:00</p>
+                        <p class="ubicacion">📍 Museo de Arte Contemporáneo</p>
+                    </div>
+                    <p class="descripcion">Explora el vibrante mundo del arte pop en una exposición única de artistas consagrados y emergentes.</p>
+                    <button class="btn-detalle">Ver Más</button>
+                </div>
+            </article>
+        </div>
+
+        <section class="destacados-eventos">
+            <h2>Eventos Destacados</h2>
+            <div class="carousel-eventos">
+                <div class="evento-destacado">
+                    <img src="15.gif" alt="Evento Destacado">
+                    <div class="info-destacado">
+                        <h3>El sakura de Japon</h3>
+                        <p>25 Octubre | Sala Sakamoto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destacados-eventos">
+            <div class="carousel-eventos">
+                <div class="evento-destacado">
+                    <img src="14.gif" alt="Evento Destacado">
+                    <div class="info-destacado-negro">
+                        <h3>El arte nociva del Futuro</h3>
+                        <p>25 Octubre | Sala Futurama</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="eventos.js"></script>
 </body>
 </html>

@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="arte.css">
     <link href="https://fonts.cdnfonts.com/css/harting" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/insight-issue-new" rel="stylesheet">
-                
-                
+
+
 
     <title>Document</title>
 </head>
+
 <body>
-     <header class="headercarta">
+    <header class="headercarta">
         <nav class="menu">
-          <ul>
-            <li><a href="mapas.html">Ubicación</a></li>
-            <li><a href="artistas.html">Artistas</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
-            <li><a href="index.html"><img src="logo.png" alt="logo" width="150" height="100"></a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul> 
+            <ul>
+                <li><a href="mapas.html">Ubicacion</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="index.html"><img src="logo.png" alt="logo" width="150" height="100"></a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </nav>
-     </header>
+    </header>
 
     <main class="galeria-container">
-        <h1 >
+        <h1>
             <style>
-            @import url('https://fonts.cdnfonts.com/css/harting');
+                @import url('https://fonts.cdnfonts.com/css/harting');
             </style>
-        Nuestra Coleccion
+            Nuestra Coleccion
         </h1>
-        
+
         <div class="filtros">
             <button class="btn active" data-filter="todos">Todos</button>
             <button class="btn" data-filter="pintura">Pintura</button>
             <button class="btn" data-filter="escultura">Escultura</button>
-            <button class="btn" data-filter="fotografia">Fotografía</button>
+            <button class="btn" data-filter="fotografia">Fotografia</button>
             <button class="btn" data-filter="digital">Arte Digital</button>
         </div>
 
@@ -68,7 +70,7 @@
                 </div>
             </article>
 
-            
+
             <article class="obra-item pintura">
                 <img src="grito.jpg" alt="El Grito" class="obra-imagen">
                 <div class="obra-info">
@@ -90,7 +92,7 @@
                 </div>
             </article>
 
-           
+
 
 
             <article class="obra-item pintura">
@@ -136,7 +138,7 @@
 
 
             <article class="obra-item digital">
-                <img src="IA.jpg" alt="IA" class="obra-imagen">
+                <img src="ia.gif" alt="IA" class="obra-imagen">
                 <div class="obra-info">
                     <h3>IA</h3>
                     <p class="artista">La IA</p>
@@ -168,7 +170,7 @@
 
 
             <article class="obra-item fotografia">
-                <img src="kiss.jpg" alt="Kiss"Kiss class="obra-imagen">
+                <img src="kiss.jpg" alt="Kiss" Kiss class="obra-imagen">
                 <div class="obra-info">
                     <h3>Kiss</h3>
                     <p class="artista">Anónimo</p>
@@ -196,20 +198,41 @@
             <div id="imgtext"></div>
         </div>
 
-        <section class="destacados">
+        <section class="destacados-eventos">
             <h2>Obras Destacadas del Mes</h2>
-
-            <div class="carousel">
+            <div class="carousel-eventos">
+                <div class="evento-destacado">
+                    <img src="gifcampo.gif" alt="Evento Destacado">
+                    <div class="info-destacado-verde">
+                        <h3>El Kebab Explosivo</h3>
+                        <p>25 Octubre | Sala Futurama</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="destacados-eventos">
+            <div class="carousel-eventos">
+                <div class="evento-destacado">
+                    <img src="GIFra.gif" alt="Evento Destacado">
+                    <div class="info-destacado-akira">
+                        <h3>AKIRA</h3>
+                        <p>27 Octubre | Sala Futurama</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         </section>
 
         <div class="cta-galeria">
             <p>¿Eres artista y quieres exponer tu obra?</p>
-            <a href="contacto.html" class="btn-cta">Contáctanos</a>
+            <a href="contacto.html" class="btn-cta">Contactanos</a>
         </div>
     </main>
 
     <script src="arte.js"></script>
 </body>
+
 </html>

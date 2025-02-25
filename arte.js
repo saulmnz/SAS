@@ -62,3 +62,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+const carousel = document.querySelector('.carousel-eventos');
+let scrollAmount = 0;
+
+function autoScroll() {
+    const itemWidth = document.querySelector('.evento-destacado').offsetWidth;
+    scrollAmount += itemWidth + 20;
+    
+    if(scrollAmount > carousel.scrollWidth - carousel.offsetWidth) {
+        scrollAmount = 0;
+    }
+    
+    carousel.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+setInterval(autoScroll, 5000);
+
+document.querySelectorAll('.evento-item').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.querySelector('.evento-imagen').style.transform = 'scale(1.05)';
+    });
+    
+    item.addEventListener('mouseout', () => {
+        item.querySelector('.evento-imagen').style.transform = 'scale(1)';
+    });
+});
+
+// Scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+
+
