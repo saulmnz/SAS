@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    margin-top: 70px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+  }
+  .container {
+    position: relative;
+    
+    width: 320px;
+    margin: 30px auto 0 auto;
+    perspective: 1000px;
+    margin-bottom: 375px;
+
+  }
+  
+
+    h1 {
+        margin-top: 300px;
+        font-family: 'Insight Issue New', sans-serif;
+        letter-spacing: 3px;
+        color: #333;
+        width: 100%; 
+        text-align: center; 
+        font-size: 2.5rem; 
+        margin: 20px 0; 
+        margin-bottom: 5px;
+    }  
+    
+    
+  .container h2{
+    font-family: 'Japari Sans', sans-serif;
+    color: black;
+  }
+  .carousel {
+    position: absolute;
+    width: 100%;
+    image-rendering: crisp-edges; 
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    display: flex;
+    
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://i.pinimg.com/736x/0c/12/c7/0c12c765b88c087c9d7a2df444b3405e.jpg");
+    transform: rotateY(  0deg) translateZ(430px);
+    image-rendering: crisp-edges; 
+
+    border-radius: 5px;
+ }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://i.pinimg.com/736x/59/00/38/59003819c7dc0084fbd22d77087aa288.jpg");
+    transform: rotateY( 40deg) translateZ(430px);
+    image-rendering: crisp-edges; 
+
+    border-radius: 5px;
+    }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://i.pinimg.com/originals/50/19/fa/5019fad3d790dc52bab0a2cb5d136192.gif");
+    transform: rotateY( 80deg) translateZ(430px);
+    image-rendering: crisp-edges; 
+
+    border-radius: 5px;
+
+ }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://i.pinimg.com/736x/e9/26/46/e92646a3c0018f4716b4104ab706c70d.jpg");
+    transform: rotateY(120deg) translateZ(430px); 
+    image-rendering: crisp-edges; 
+
+    border-radius: 5px;
+}
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://i.pinimg.com/736x/f9/80/45/f98045e34ceaf1fc1107d41585dc7583.jpg");
+   transform: rotateY(160deg) translateZ(430px); 
+   border-radius: 5px;
+   image-rendering: crisp-edges; 
+
+}
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://i.pinimg.com/736x/fa/5f/fd/fa5ffd9756f1934f9fe1c06aafa4d073.jpg");
+   transform: rotateY(200deg) translateZ(430px); 
+   image-rendering: crisp-edges; 
+
+   border-radius: 5px;
+}
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://i.pinimg.com/736x/3a/2e/e7/3a2ee76b0b89c899d10133f9c131eff7.jpg");
+   transform: rotateY(240deg) translateZ(430px); 
+   image-rendering: crisp-edges; 
+
+   border-radius: 5px;
+}
+  .carousel__face:nth-child(8) {
+    background-image: url("https://i.pinimg.com/736x/41/5c/85/415c85f12c749d184cc3372c2aa885d6.jpg");
+    transform: rotateY(280deg) translateZ(430px);
+    image-rendering: crisp-edges; 
+
+    border-radius: 5px;
+ }
+ .carousel__face:nth-child(9) {
+    background-image: url("https://i.pinimg.com/736x/fe/61/92/fe619285ce91a29e410050285794717a.jpg");
+    transform: rotateY(320deg) translateZ(430px); 
+    image-rendering: crisp-edges; 
+
+    border-radius: 5px;
+}
+
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+
+#animated-title {
+    font-family: 'Insight Issue New', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  #animated-title span {
+    display: inline-block;
+    transition: all 0.5s ease;
+    position: relative;
+    letter-spacing: 0;
+
+  }
+  
+  #animated-title:hover span {
+    animation: disperse 1s forwards;
+    letter-spacing: 0;
+
+  }
+  
+  @keyframes disperse {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(calc(var(--x) * 100px), calc(var(--y) * 100px)) rotate(calc(var(--r) * 360deg));
+      opacity: 0;
+    }
+  }
+  
+  #animated-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #e7a200, #e7a200, #001aff, #e7a200, #001aff,  #e7a200,#e7a200);
+    background-size: 400% 400%;
+    z-index: -1;
+
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+  
+  #animated-title:hover::before {
+    opacity: 0.7;
+    animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
