@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -17,7 +22,6 @@ nav.menu {
   background-color: #e7a200;
   padding: 1rem;
   text-align: center;
-
 }
 
 nav.menu ul {
@@ -25,16 +29,14 @@ nav.menu ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: wrap;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 nav.menu ul li {
   display: inline-block;
-  margin-right: 20px;
   margin: 10px;
-  padding: 10px 10px;
-
+  padding: 10px;
 }
 
 nav.menu ul li a {
@@ -45,417 +47,181 @@ nav.menu ul li a {
 
 nav.menu ul li a.active {
   border-radius: 5px;
-
 }
 
 .galeria-container {
   padding: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 h1 {
   font-family: 'Insight Issue New', sans-serif;
-  font-size: 60px;
+  font-size: 3em;
+  margin-top: 20px;
+
   text-align: center;
-  margin-bottom: 20px;
   text-transform: uppercase;
   color: #333;
   letter-spacing: 4px;
- 
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+h3 {
+  font-family: 'Insight Issue New', sans-serif;
+}
 
-h3{
-    font-family: 'Insight Issue New', sans-serif;
+p {
+  font-size: 1.2em;
+  font-family: 'Insight Issue New', sans-serif;
+  text-align: center;
+  color: #333;
 }
-p{
-    font: size 80px;
-    font-family: 'Khabi', sans-serif;
-    font-style: normal;
-    font-weight: 7;
-    text-align: center;
-    color:black;
-  
-                                                
+
+.artista-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
-descripcion{
-    display: block;
-    font-size: 18px;
-    text-align: justify;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 5;
-    font-style: italic, bold;
-    margin-left: 800px;
-    margin-right: 5px;
-    width: 100%;
-    margin-top: 50px;
-    
+
+.marina, .tillmans, .kusama, .miro {
+  width: 50%;
+  min-width: 400px;
+  height: 500px;
+  background-size: cover;
+  background-position: right;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 }
-h2{
-    font-family: 'Insight Issue New';
-    text-align: justify;
-    display: block;
-    margin-left: 800px;
-    margin-right: 10px;
-    width: 100%;
-    margin-top: 50px;
-    font-size: 40px;
-    color:#e7a200;
-    
-}
+
 .marina {
-    width: 700px;
-    height: 500px;
-    background-image: url('https://i.pinimg.com/736x/84/46/b3/8446b3d68044fa37c0168ac0aeb10eb5.jpg');
-    background-size: cover; 
-    background-position: right; 
-    border-radius: 10px;  
-    margin-left: 40px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra con desenfoque */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+  background-image: url('https://i.pinimg.com/736x/84/46/b3/8446b3d68044fa37c0168ac0aeb10eb5.jpg');
 }
 
-.marina:hover {
-    transform: scale(1.05); /* Efecto de zoom */
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
-    background-color: #e7a200; /* Fondo amarillo */
-    background-blend-mode: multiply; /* Mezclar el color de fondo con la imagen */
-    filter: brightness(1.1); /* Aumentar brillo para resaltar el color amarillo */
-}
 .tillmans {
-    width: 700px;
-    height: 500px;
-    background-image: url('https://i.pinimg.com/736x/bc/81/e8/bc81e888f1f7bc1ae99109b49013ddcd.jpg');
-    background-size: cover; 
-    background-position: right; 
-    border-radius: 10px;  
-    margin-left: 50px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.tillmans:hover {
-    transform: scale(1.05); 
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6); 
-    background-color: tan; 
-    background-blend-mode: multiply; 
-    filter: brightness(1.1); 
+  background-image: url('https://i.pinimg.com/736x/bc/81/e8/bc81e888f1f7bc1ae99109b49013ddcd.jpg');
 }
 
 .kusama {
-    width: 700px;
-    height: 500px;
-    background-image: url('https://i.pinimg.com/736x/eb/78/b2/eb78b264623b2f8f6fb285c797f6c55d.jpg');
-    background-size: cover; 
-    background-position: right; 
-    border-radius: 10px;  /* Bordes redondeados */
-    margin-left: 50px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra con desenfoque */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
-}
-
-.kusama:hover {
-    transform: scale(1.05); /* Efecto de zoom */
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
-    background-color: #e7a200; /* Fondo amarillo */
-    background-blend-mode: multiply; /* Mezclar el color de fondo con la imagen */
-    filter: brightness(1.1); /* Aumentar brillo para resaltar el color amarillo */
+  background-image: url('https://i.pinimg.com/736x/eb/78/b2/eb78b264623b2f8f6fb285c797f6c55d.jpg');
 }
 
 .miro {
-    width: 700px;
-    height: 500px;
-    background-image: url('https://i.pinimg.com/736x/28/db/be/28dbbeefd63655c93ae5b35e4e52fad3.jpg');
-    background-size: cover; 
-    background-position: right; 
-    border-radius: 10px;  /* Bordes redondeados */
-    margin-left: 50px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra con desenfoque */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+  background-image: url('https://i.pinimg.com/736x/28/db/be/28dbbeefd63655c93ae5b35e4e52fad3.jpg');
 }
 
-.miro:hover {
-    transform: scale(1.05); /* Efecto de zoom */
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
-    background-color: tan; /* Fondo amarillo */
-    background-blend-mode: multiply; /* Mezclar el color de fondo con la imagen */
-    filter: brightness(1.1); /* Aumentar brillo para resaltar el color amarillo */
+.texto-artista {
+  width: 50%;
+  min-width: 300px;
+  padding: 20px;
 }
 
+h2 {
+  font-family: 'Insight Issue New';
+  font-size: 40px;
+  color: #e7a200;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
 
-  .btn-12,
-  .btn-12 *,
-  .btn-12 :after,
-  .btn-12 :before,
-  .btn-12:after,
-  .btn-12:before {
-    border: 0 solid;
-    box-sizing: border-box;
+.descripcion {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  max-width: 600px;
+}
+
+.btn-12 {
+  margin: 20px 0 0 0;
+  width: auto;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  background-color: #e7a200;
+  color: white;
+  border: none;
+  border-radius: 99rem;
+  cursor: pointer;
+  font-family: 'Harting';
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
+@media (max-width: 1200px) {
+  .artista-section {
+    flex-direction: column;
+    gap: 30px;
   }
-  
-  .btn-12 {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: button;
-    background-color: #e7a200;
-    background-image: none;
-    color: #fff;
-    cursor: pointer;
-    font-family: 'Harting';
-    font-size: 100%;
-    font-weight: 900;
-    line-height: 1.5;
-    margin: 0;
-    -webkit-mask-image: -webkit-radial-gradient(#e7a200, #fff);
-    padding: 0;
-    text-transform: lowercase;
-  }
-  
-  .btn-12:disabled {
-    cursor: default;
-  }
-  
-  .btn-12:-moz-focusring {
-    outline: auto;
-  }
-  
-  .btn-12 svg {
-    display: block;
-    vertical-align: middle;
-    
-  }
-  
-  .btn-12 [hidden] {
-    display: none;
-  }
-  
-  .btn-12 {
-    border-radius: 99rem;
-    border-width: 2px;
-    padding: 0.8rem 3rem;
-    position: relative;
-    margin-left: 800px;
-    margin-right: 10px;
+
+  .marina, .tillmans, .kusama, .miro,
+  .texto-artista {
     width: 100%;
-    margin-top: 50px;
+    min-width: unset;
   }
-  
-  .btn-12 span {
-    mix-blend-mode: difference;
-  }
-  
-  .btn-12:after,
-  .btn-12:before {
-    background: linear-gradient(
-      90deg,
-      #fff 25%,
-      transparent 0,
-      transparent 50%,
-      #fff 0,
-      #fff 75%,
-      transparent 0
-    );
-    content: "";
-    inset: 0;
-    position: absolute;
-    transform: translateY(var(--progress, 100%));
-    transition: transform 0.2s ease;
-  }
-  
-  .btn-12:after {
-    --progress: -100%;
-    background: linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 25%,
-      #fff 0,
-      #fff 50%,
-      transparent 0,
-      transparent 75%,
-      #fff 0
-    );
-    z-index: -1;
-  }
-  
-  .btn-12:hover:after,
-  .btn-12:hover:before {
-    --progress: 0;
-  }
-  
-  :root {
-    /* Colors */
-    --primary-bg:#e7a200 ;
-    --text-light: #e4e4e4;
-    --text-muted: white;
-    --accent: #00cccc;
-
-    /* Fonts */
-    --font-heading: 'Bodoni Moda', serif;
-    --font-body: 'Raleway', sans-serif;
-
-    /* Font sizes */
-    --text-xl: 1.5rem;
-    --text-base: 1rem;
-    --text-sm: 0.875rem;
-
-    /* Spacing */
-    --spacing-xl: 50px;
-    --spacing-lg: 40px;
-    --spacing-md: 20px;
-    --spacing-sm: 12px;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-    
-}
-
-
-
 
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: var(--spacing-lg);
-        padding: var(--spacing-md);
-    }
-    .footer-title-container {
-        width: 90%;
-    }
-}
-
-.design-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #1f1f1f;
-  min-height: 100vh;
-  padding: 100px 0;
-  font-family: Jost;
-  text-align: center;
-}
-
-.design {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-
-.timeline {
-  width: 80%;
-  height: auto;
-  max-width: 800px;
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra los elementos hijos horizontalmente */
-  justify-content: center; /* Centra los elementos hijos verticalmente */
-  text-align: center;
-}
-
-.timeline-content {
-  padding: 20px;
-  background: #1f1f1f;
-  box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-  border-radius: 5px;
-  color: white;
-  padding: 1.75rem;
-  transition: 0.4s ease;
-  overflow-wrap: break-word !important;
-  margin: 1rem auto; /* Centra el contenido horizontalmente */
-  margin-bottom: 20px;
-  border-radius: 6px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido interno horizontalmente */
-  justify-content: center; /* Centra el contenido interno verticalmente */
-}
-
-.timeline-component {
-  margin: 0px auto 20px auto; /* Centra el componente horizontalmente */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido interno horizontalmente */
-  justify-content: center; /* Centra el contenido interno verticalmente */
-}
-
-@media screen and (min-width: 768px) {
-  .timeline {
-    display: grid;
-    grid-template-columns: 1fr 3px 1fr;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  h1 {
+    font-size: 40px;
   }
-  .timeline-middle {
-    position: relative;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-    width: 3px;
-    height: 100%;
-    margin: 0 auto; /* Centra la línea vertical */
+
+  h2 {
+    font-size: 30px;
   }
-  .main-middle {
-    opacity: 0;
-  }
-  .timeline-circle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-    transform: translateX(-50%); /* Centra el círculo en la línea */
+
+  .marina, .tillmans, .kusama, .miro {
+    height: 300px;
   }
 }
+
 .footer {
-  background: linear-gradient(135deg,  #e7a200, #e7a200);
+  background: linear-gradient(135deg, #e7a200, #e7a200);
   color: white;
   text-align: center;
-  margin-top:70px;
+  margin-top: 70px;
   width: 100%;
   height: auto;
   font-family: 'khabi', sans-serif;
+  padding: 20px 0; /* Añadido para espaciado interno */
 }
 
 .footer-content {
   display: flex;
   justify-content: center;
-   gap: 20px;
+  gap: 20px;
   flex-wrap: wrap;
   max-width: 90%;
   margin: 0 auto;
   width: 100%;
 }
-.footer h6{
+
+.footer h6 {
   font-family: 'Insight Issue New';
   font-size: 1.8em;
   color: rgb(54, 50, 50);
-
-  
 }
+
 .footer nav {
   min-width: 120px;
   margin-bottom: 40px;
-
 }
 
 .footer-heading {
@@ -477,3 +243,41 @@ h2{
   color: rgb(54, 50, 50);
   transform: translateX(5px);
 }
+h1 {
+    font-size: 3em;
+    font-family: 'Insight Issue New', sans-serif;
+    line-height: 1.3;
+    margin-top: 70px;
+    color: #333;
+    text-align: center;
+    position: relative;
+    padding-left: 20px;
+    transition: transform 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+  }
+
+  h1:hover {
+    color: #e7a200;
+    transform: translateY(-5px) scale(1.05);
+    letter-spacing: 2px;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e7a200;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  h1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  
+  
