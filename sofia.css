@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Insight Issue New', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+nav.menu {
+  background-color: #e7a200;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav.menu ul li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+
+nav.menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+nav.menu ul li a.active {
+  border-radius: 5px;
+}
+
+.galeria-container {
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+h1 {
+  font-family: 'Insight Issue New', sans-serif;
+  font-size: 3em;
+  margin-top: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h3 {
+  font-family: 'Insight Issue New', sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+  font-family: 'Insight Issue New', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.artista-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.marina, .tillmans, .kusama, .miro {
+  width: 50%;
+  min-width: 400px;
+  height: 500px;
+  background-size: cover;
+  background-position: right;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.marina {
+  background-image: url('https://i.pinimg.com/736x/84/46/b3/8446b3d68044fa37c0168ac0aeb10eb5.jpg');
+}
+
+.tillmans {
+  background-image: url('https://i.pinimg.com/736x/bc/81/e8/bc81e888f1f7bc1ae99109b49013ddcd.jpg');
+}
+
+.kusama {
+  background-image: url('https://i.pinimg.com/736x/eb/78/b2/eb78b264623b2f8f6fb285c797f6c55d.jpg');
+}
+
+.miro {
+  background-image: url('https://i.pinimg.com/736x/28/db/be/28dbbeefd63655c93ae5b35e4e52fad3.jpg');
+}
+
+.texto-artista {
+  width: 50%;
+  min-width: 300px;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Insight Issue New';
+  font-size: 40px;
+  color: #e7a200;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.descripcion {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  max-width: 600px;
+}
+
+.btn-12 {
+  margin: 20px 0 0 0;
+  width: auto;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  background-color: #e7a200;
+  color: white;
+  border: none;
+  border-radius: 99rem;
+  cursor: pointer;
+  font-family: 'Harting';
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
+@media (max-width: 1200px) {
+  .artista-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .marina, .tillmans, .kusama, .miro,
+  .texto-artista {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .marina, .tillmans, .kusama, .miro {
+    height: 300px;
+  }
+}
+
+.footer {
+  background: linear-gradient(135deg, #e7a200, #e7a200);
+  color: white;
+  text-align: center;
+  margin-top: 70px;
+  width: 100%;
+  height: auto;
+  font-family: 'khabi', sans-serif;
+  padding: 20px 0; /* Añadido para espaciado interno */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer h6 {
+  font-family: 'Insight Issue New';
+  font-size: 1.8em;
+  color: rgb(54, 50, 50);
+}
+
+.footer nav {
+  min-width: 120px;
+  margin-bottom: 40px;
+}
+
+.footer-heading {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 5px 0;
+}
+
+.footer-link:hover {
+  color: rgb(54, 50, 50);
+  transform: translateX(5px);
+}
+h1 {
+    font-size: 3em;
+    font-family: 'Insight Issue New', sans-serif;
+    line-height: 1.3;
+    margin-top: 70px;
+    color: #333;
+    text-align: center;
+    position: relative;
+    padding-left: 20px;
+    transition: transform 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+  }
+
+  h1:hover {
+    color: #e7a200;
+    transform: translateY(-5px) scale(1.05);
+    letter-spacing: 2px;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e7a200;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  h1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  
+  
